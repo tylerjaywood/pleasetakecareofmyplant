@@ -31,7 +31,6 @@ def get_worksheet(spreadsheet_id):
   gc = gspread.authorize(credentials)
 
   # Open the first sheet of the spreadsheet
-  print(spreadsheet_id)
   wks = gc.open_by_key(spreadsheet_id).sheet1
   return wks
 

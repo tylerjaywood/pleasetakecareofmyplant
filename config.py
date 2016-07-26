@@ -9,6 +9,7 @@ from secret import user_agent, password, weather_api, zipcode, test_sub
 # PRAW
 user_name = 'takecareofmyplant'
 subreddit = 'takecareofmyplant'
+mailing_list_id = "GoogleId"
 
 def getReddit():
     r = praw.Reddit(user_agent=user_agent)
