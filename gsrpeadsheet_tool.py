@@ -1,6 +1,7 @@
 import sys
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import config as c
 
 # Usage:
 # script.py spreadsheet_id command [arguments]
@@ -27,7 +28,7 @@ def get_list(wks):
 def get_worksheet(spreadsheet_id):
   # Boring authenthication process
   scope = ['https://spreadsheets.google.com/feeds']
-  credentials = ServiceAccountCredentials.from_json_keyfile_name('google.json', scope)
+  credentials = ServiceAccountCredentials.from_json_keyfile_name(c.pathPrefix() + 'google.json', scope)
   gc = gspread.authorize(credentials)
 
   # Open the first sheet of the spreadsheet
