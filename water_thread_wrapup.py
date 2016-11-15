@@ -52,9 +52,9 @@ def reply_to_vote(comment, score=None):
     if score == 0:
         return None
     elif score == 1:
-        comment.reply("thanks, I've recorded your vote to water!")
+        comment.reply("Thanks, I've recorded your vote to water!")
     elif score == -1:
-        comment.reply("thanks, I've recorded your vote to not water!")
+        comment.reply("Thanks, I've recorded your vote to not water!")
 
 # Record comments
 recorded_yes = {}
