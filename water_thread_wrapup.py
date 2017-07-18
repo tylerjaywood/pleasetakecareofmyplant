@@ -25,6 +25,10 @@ with open(path+'daily_thread.txt', 'r+') as f:
     f.close()
 
 s = r.get_submission(submission_id = thread)
+# If the last post isn't from today, just do nothing
+# It at least avoids double-watering this way
+if time.gmtime(s.created_utc)[2] + 1 != time.gmtime()[2]:
+    exit("Thread too old. Skipping today")
 s.lock()
 s.unsticky()
 
