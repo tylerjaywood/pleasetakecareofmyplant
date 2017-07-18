@@ -26,8 +26,7 @@ with open(path+'daily_thread.txt', 'r+') as f:
 
 s = r.get_submission(submission_id = thread)
 if time.gmtime(s.created_utc())[2] + 1 != time.gmtime()[2]:
-    print "Thread too old. Skipping today"
-    exit()
+    exit("Thread too old. Skipping today")
 s.lock()
 s.unsticky()
 
