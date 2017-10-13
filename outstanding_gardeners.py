@@ -6,9 +6,6 @@ import config as c
 
 from collections import Counter
 
-REDDIT_USERNAME = 'takecareofmyplant'
-REDDIT_PASSWORD = 'hunter2'
-
 path = c.pathPrefix()
 
 r = c.getReddit()

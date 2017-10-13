@@ -7,9 +7,6 @@ import config as c
 import post_templates as posts
 #import gpio_out as g
 
-REDDIT_USERNAME = 'takecareofmyplant'
-REDDIT_PASSWORD = 'hunter2'
-
 # Set-up
 r = c.getReddit()
 sr = c.getSubReddit(r)
